@@ -117,20 +117,17 @@ public class Jugador2 extends javax.swing.JFrame {
     }//GEN-LAST:event_Player2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        UsuarioDAO DAO=new UsuarioDAO();
-        if(DAO.buscar(Player2.getText()) != -1){
-            User2=DAO.obtener(Player2.getText());
-            TableroLogicMain TLM=new TableroLogicMain(User1,User2);
-            
-            this.dispose();
-            
-        }else{
-            JOptionPane.showMessageDialog(this,"Usuario NO Existente.");
-            
-        }
+         UsuarioDAO DAO = new UsuarioDAO();
+    // Obtener el nombre de usuario ingresado en Player2
+    String userName = Player2.getText(); 
+    if (DAO.buscar(userName) != -1) {
+        User2 = DAO.obtener(userName);
         
-
-                
+        TableroLogicMain TLM = new TableroLogicMain(User1, User2);
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "Usuario NO Existente.");
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

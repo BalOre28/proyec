@@ -169,7 +169,7 @@ public class Login extends javax.swing.JFrame {
 
           }  
         }else{
-            JOptionPane.showMessageDialog(this, "Falta Infgresar usuario o contraseña");
+            JOptionPane.showMessageDialog(this, "Falta Ingresar usuario o contraseña");
             
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
